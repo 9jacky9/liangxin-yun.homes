@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sunlitSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FAF8F5"/>
+      <stop offset="100%" stop-color="#EFECE6"/>
+    </linearGradient>
+    <linearGradient id="domeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#C26D3A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#16A34A" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="cedarRoof" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C26D3A"/>
+      <stop offset="100%" stop-color="#A35526"/>
+    </linearGradient>
+    <path id="fiberLeft" d="M 210 270 C 210 190, 280 150, 340 105" fill="none"/>
+    <path id="fiberCenter" d="M 340 375 C 340 260, 340 180, 340 105" fill="none"/>
+    <path id="fiberRight" d="M 470 270 C 470 190, 400 150, 340 105" fill="none"/>
+    <path id="orbitArc1" d="M 95 125 Q 340 15 585 125" fill="none"/>
+    <path id="orbitArc2" d="M 135 145 Q 340 50 545 145" fill="none"/>
+  </defs>
+
+  <!-- Background Architectural Canvas -->
+  <rect width="680" height="500" rx="12" fill="url(#sunlitSky)" stroke="#DDD7CC" stroke-width="2"/>
+
+  <!-- Subtle Architectural Grid Lines -->
+  <g stroke="#E2DDD3" stroke-width="1">
+    <line x1="0" y1="110" x2="680" y2="110"/>
+    <line x1="0" y1="220" x2="680" y2="220"/>
+    <line x1="0" y1="330" x2="680" y2="330"/>
+    <line x1="0" y1="440" x2="680" y2="440"/>
+    <line x1="140" y1="0" x2="140" y2="500"/>
+    <line x1="340" y1="0" x2="340" y2="500"/>
+    <line x1="540" y1="0" x2="540" y2="500"/>
+  </g>
+
+  <!-- Protective Global Cloud Dome Overhead -->
+  <path d="M 85 140 Q 340 10 595 140" fill="url(#domeGrad)" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M 135 145 Q 340 50 545 145" fill="none" stroke="#C26D3A" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Global Relay Nodes on Cloud Dome -->
+  <g>
+    <circle cx="140" cy="115" r="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"/>
+    <text x="140" y="96" text-anchor="middle" font-size="11" font-weight="700" fill="#1E242B">东京 BGP</text>
+    <circle cx="540" cy="115" r="8" fill="#FFFFFF" stroke="#16A34A" stroke-width="2.5"/>
+    <text x="540" y="96" text-anchor="middle" font-size="11" font-weight="700" fill="#1E242B">美西 GIA</text>
+    <circle cx="235" cy="82" r="7" fill="#FFFFFF" stroke="#C26D3A" stroke-width="2.5"/>
+    <text x="235" y="65" text-anchor="middle" font-size="11" font-weight="700" fill="#1E242B">香港 IEPL</text>
+    <circle cx="445" cy="82" r="7" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"/>
+    <text x="445" y="65" text-anchor="middle" font-size="11" font-weight="700" fill="#1E242B">新加坡原生</text>
+  </g>
+
+  <!-- Central Cloud Hub Core -->
+  <g transform="translate(340, 102)">
+    <circle r="28" fill="#2563EB" opacity="0.15">
+      <animate attributeName="r" values="24;36;24" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.06;0.25" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <rect x="-56" y="-22" width="112" height="44" rx="22" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"/>
+    <text x="0" y="-2" text-anchor="middle" font-size="12" font-weight="800" fill="#1E242B">良心云中枢</text>
+    <text x="0" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#16A34A">1:1 足额千兆</text>
+  </g>
+
+  <!-- Fiber Uplink Guide Paths -->
+  <use href="#fiberLeft" stroke="#C26D3A" stroke-width="2" stroke-dasharray="5 5" opacity="0.7"/>
+  <use href="#fiberCenter" stroke="#2563EB" stroke-width="2.5" stroke-dasharray="5 5" opacity="0.8"/>
+  <use href="#fiberRight" stroke="#16A34A" stroke-width="2" stroke-dasharray="5 5" opacity="0.7"/>
+
+  <!-- Animated Fiber Data Packets Flowing Up & Down -->
+  <circle r="5" fill="#C26D3A">
+    <animateMotion dur="2.4s" repeatCount="indefinite">
+      <mpath href="#fiberLeft"/>
+    </animateMotion>
+  </circle>
+  <circle r="5.5" fill="#2563EB">
+    <animateMotion dur="1.9s" repeatCount="indefinite">
+      <mpath href="#fiberCenter"/>
+    </animateMotion>
+  </circle>
+  <circle r="5" fill="#16A34A">
+    <animateMotion dur="2.2s" repeatCount="indefinite">
+      <mpath href="#fiberRight"/>
+    </animateMotion>
+  </circle>
+  <circle r="4.5" fill="#2563EB">
+    <animateMotion dur="3.4s" repeatCount="indefinite">
+      <mpath href="#orbitArc1"/>
+    </animateMotion>
+  </circle>
+  <circle r="4" fill="#C26D3A">
+    <animateMotion dur="2.9s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+      <mpath href="#orbitArc2"/>
+    </animateMotion>
+  </circle>
+
+  <!-- Architectural Two-Story Sunlit Smart Home Cross-Section -->
+  <!-- Cantilevered Pitched Roof -->
+  <polygon points="85,205 340,148 595,205 575,215 340,164 105,215" fill="url(#cedarRoof)"/>
+  <rect x="108" y="212" width="464" height="6" fill="#1E242B"/>
+
+  <!-- Home Building Frame -->
+  <rect x="118" y="218" width="444" height="222" rx="4" fill="#FFFFFF" stroke="#1E242B" stroke-width="3"/>
+  <!-- Second Floor Slab -->
+  <rect x="118" y="324" width="444" height="8" fill="#1E242B"/>
+  <!-- Vertical Interior Structural Pillars -->
+  <rect x="336" y="218" width="8" height="106" fill="#DDD7CC"/>
+  <rect x="266" y="332" width="8" height="108" fill="#DDD7CC"/>
+  <rect x="416" y="332" width="8" height="108" fill="#DDD7CC"/>
+
+  <!-- 2F Left Room: AI Study & Remote Workstation -->
+  <g transform="translate(136, 232)">
+    <rect x="0" y="0" width="184" height="80" rx="4" fill="#FAF8F5" stroke="#E5E0D5"/>
+    <text x="12" y="18" font-size="11" font-weight="800" fill="#C26D3A">二层书房 · AI 研发工作站</text>
+    <!-- Desk & Dual Monitor -->
+    <rect x="16" y="54" width="86" height="5" fill="#C26D3A"/>
+    <rect x="28" y="30" width="46" height="22" rx="2" fill="#1E242B"/>
+    <rect x="31" y="33" width="40" height="16" fill="#2563EB" opacity="0.85">
+      <animate attributeName="opacity" values="0.65;1;0.65" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="114" y="28" width="58" height="40" rx="4" fill="#FFFFFF" stroke="#C8C0B3"/>
+    <text x="143" y="45" text-anchor="middle" font-size="9" font-weight="700" fill="#1E242B">GPT / Claude</text>
+    <text x="143" y="59" text-anchor="middle" font-size="9" font-weight="700" fill="#16A34A">直连 18ms</text>
+  </g>
+
+  <!-- 2F Right Room: Next-Gen Console & Esports Room -->
+  <g transform="translate(356, 232)">
+    <rect x="0" y="0" width="190" height="80" rx="4" fill="#FAF8F5" stroke="#E5E0D5"/>
+    <text x="12" y="18" font-size="11" font-weight="800" fill="#16A34A">二层电竞房 · 主机全开放NAT</text>
+    <!-- Gaming Display & Console -->
+    <rect x="16" y="28" width="56" height="32" rx="3" fill="#1E242B"/>
+    <circle cx="44" cy="44" r="8" fill="#16A34A">
+      <animate attributeName="r" values="6;10;6" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <rect x="86" y="28" width="90" height="40" rx="4" fill="#ECFDF5" stroke="#16A34A"/>
+    <text x="131" y="45" text-anchor="middle" font-size="9" font-weight="800" fill="#065F46">PS5 / Switch</text>
+    <text x="131" y="59" text-anchor="middle" font-size="9" font-weight="700" fill="#16A34A">NAT Type A 零丢包</text>
+  </g>
+
+  <!-- 1F Left Room: 8K Sunlit Living Room -->
+  <g transform="translate(132, 342)">
+    <rect x="0" y="0" width="124" height="86" rx="4" fill="#FAF8F5" stroke="#E5E0D5"/>
+    <text x="10" y="18" font-size="10.5" font-weight="800" fill="#1E242B">一层客厅 · 8K影院</text>
+    <rect x="12" y="28" width="100" height="46" rx="3" fill="#1E242B"/>
+    <text x="62" y="49" text-anchor="middle" font-size="10" font-weight="800" fill="#FFFFFF">4K / 8K HDR</text>
+    <text x="62" y="64" text-anchor="middle" font-size="9" font-weight="700" fill="#C26D3A">奈飞迪士尼秒开</text>
+  </g>
+
+  <!-- 1F Center Atrium: Smart Fiber Gateway Core -->
+  <g transform="translate(282, 342)">
+    <rect x="0" y="0" width="126" height="86" rx="4" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="63" y="18" text-anchor="middle" font-size="10.5" font-weight="800" fill="#2563EB">全屋旁路网关中枢</text>
+    <rect x="25" y="28" width="76" height="32" rx="4" fill="#1E242B"/>
+    <circle cx="42" cy="44" r="4" fill="#16A34A">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="58" cy="44" r="4" fill="#2563EB">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="74" cy="44" r="4" fill="#C26D3A"/>
+    <text x="63" y="75" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1E242B">无感分流 · 零倍率</text>
+  </g>
+
+  <!-- 1F Right Room: Private NAS & Docker Server -->
+  <g transform="translate(432, 342)">
+    <rect x="0" y="0" width="116" height="86" rx="4" fill="#FAF8F5" stroke="#E5E0D5"/>
+    <text x="10" y="18" font-size="10.5" font-weight="800" fill="#1E242B">一层机柜 · NAS私有云</text>
+    <rect x="16" y="28" width="34" height="46" rx="3" fill="#1E242B"/>
+    <line x1="22" y1="38" x2="44" y2="38" stroke="#16A34A" stroke-width="2"/>
+    <line x1="22" y1="48" x2="44" y2="48" stroke="#2563EB" stroke-width="2"/>
+    <line x1="22" y1="58" x2="44" y2="58" stroke="#C26D3A" stroke-width="2"/>
+    <text x="82" y="48" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1E242B">Docker</text>
+    <text x="82" y="62" text-anchor="middle" font-size="9" font-weight="700" fill="#16A34A">满速拉取镜像</text>
+  </g>
+
+  <!-- Architectural Foundation Slab & Courtyard Base -->
+  <rect x="78" y="440" width="524" height="14" rx="3" fill="#C8C0B3" stroke="#1E242B" stroke-width="2"/>
+  <text x="340" y="478" text-anchor="middle" font-size="12" font-weight="700" fill="#525B66">良心云 · 阳光中庭架构 · 1:1 真实带宽直通全屋终端</text>
+</svg>

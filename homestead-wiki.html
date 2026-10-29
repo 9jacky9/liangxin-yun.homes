@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>筑网智库 - 良心云家庭全屋千兆组网、Mesh回程优化与跨境专线技术专栏</title>
+  <meta name="description" content="良心云筑网智库为您提供深度原创的智慧家庭网络架构指南，涵盖1:1真实带宽实测、全屋Mesh有线回程调优、多设备QoS队列调度、PS5/Switch主机NAT类型优化及群晖NAS容器加速实战。">
+  <meta name="keywords" content="筑网智库,良心云,家庭全屋组网,Mesh有线回程,QoS带宽调度,PS5联机NAT优化,群晖Docker加速,机场倍率揭秘">
+  <link rel="canonical" href="https://liangxin-yun.homes/homestead-wiki.html">
+  <meta property="og:title" content="筑网智库 - 良心云家庭全屋千兆组网与跨境专线技术专栏">
+  <meta property="og:description" content="探索现代智慧家庭的全屋网络优化方案：从Mesh回程、QoS公平队列到NAS私有影院与透明倍率专线评测。">
+  <meta property="og:image" content="https://liangxin-yun.homes/hero-smart-atrium.svg">
+  <meta property="og:url" content="https://liangxin-yun.homes/homestead-wiki.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="良心云">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="良心云首页">
+        <svg viewBox="0 0 64 64" role="img" aria-label="良心云阳光屋脊与云穹融合标志">
+          <path d="M10 26 C18 10, 46 10, 54 26" fill="none" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M6 34 L32 16 L58 34" fill="none" stroke="#C26D3A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="14" y="33" width="36" height="23" rx="3" fill="#FFFFFF" stroke="#1E242B" stroke-width="3"/>
+          <text x="32" y="49" text-anchor="middle" font-size="13" font-weight="900" fill="#1E242B">良心</text>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-title">良心云</span>
+          <span class="brand-domain">LIANGXIN-YUN.HOMES</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="index.html">首页中枢</a>
+        <a href="index.html#advantages">专线品质</a>
+        <a href="index.html#media-ai">视听与AI</a>
+        <a href="index.html#pricing">良心套餐</a>
+        <a href="index.html#faq">组网必读</a>
+        <a href="homestead-wiki.html" class="nav-hub-pill active">筑网智库</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <span class="section-eyebrow">HOMESTEAD NETWORK ARCHITECTURE WIKI</span>
+        <h1>筑网智库 · 现代智慧家庭全屋组网与跨境互联专栏</h1>
+        <p>由良心云网络工程团队撰写的深度技术文档，助您打通从家庭弱电箱光纤入户、全屋 Mesh 漫游到海外 IEPL 专线的每一处性能瓶颈。</p>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="container">
+        <div class="grid-3">
+          <!-- Article 1 Card -->
+          <article class="wiki-card">
+            <div>
+              <div class="wiki-tag-row">
+                <span class="wiki-cat">架构实测 · 品牌深度</span>
+                <span>阅读约 6 分钟</span>
+              </div>
+              <h2><a href="liangxin-honest-bandwidth-evaluation.html">拒绝虚标倍率与隐形限速：良心云2026全屋千兆专线实测与架构拆解</a></h2>
+              <p class="wiki-excerpt">深入剖析良心云如何通过BGP入口负载均衡、深港/沪日物理IEPL内网专线以及零虚标1:1计费引擎，在晚高峰时段依然为现代家庭提供满血千兆吞吐与超低抖动表现。</p>
+            </div>
+            <div>
+              <a href="liangxin-honest-bandwidth-evaluation.html" class="wiki-readmore">阅读完整架构报告 &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 2 Card -->
+          <article class="wiki-card">
+            <div>
+              <div class="wiki-tag-row">
+                <span class="wiki-cat">全屋漫游 · 硬件协同</span>
+                <span>阅读约 6 分钟</span>
+              </div>
+              <h2><a href="mesh-wifi-backhaul-latency-guide.html">全屋Mesh组网为何还会卡顿？有线回程与跨境网关协同优化的完整指南</a></h2>
+              <p class="wiki-excerpt">明明办了千兆宽带并买了多台高端路由器組Mesh，为什么在卧室看4K海外流媒体还是转圈？本文拆解无线回程损耗、VLAN划分以及旁路由网关与主路由的协同调优方案。</p>
+            </div>
+            <div>
+              <a href="mesh-wifi-backhaul-latency-guide.html" class="wiki-readmore">阅读完整优化指南 &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 3 Card -->
+          <article class="wiki-card">
+            <div>
+              <div class="wiki-tag-row">
+                <span class="wiki-cat">流量调度 · 队列算法</span>
+                <span>阅读约 6 分钟</span>
+              </div>
+              <h2><a href="family-multi-device-concurrent-policy.html">一家人多设备同时在线如何不抢网速？QoS智能队列管理与带宽公平调度解析</a></h2>
+              <p class="wiki-excerpt">当客厅在播放高码率蓝光流媒体、NAS在后台同步备份时，如何保障书房视频会议与电竞房游戏包优先通行？详解缓冲区膨胀（Bufferbloat）治理与CAKE/FQ_CoDel算法实战。</p>
+            </div>
+            <div>
+              <a href="family-multi-device-concurrent-policy.html" class="wiki-readmore">阅读完整调度解析 &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 4 Card -->
+          <article class="wiki-card">
+            <div>
+              <div class="wiki-tag-row">
+                <span class="wiki-cat">主机电竞 · 端口穿透</span>
+                <span>阅读约 6 分钟</span>
+              </div>
+              <h2><a href="console-ps5-switch-nat-type-optimization.html">PS5与Switch联机NAT类型受限怎么办？家庭主机游戏加速与端口转发实战</a></h2>
+              <p class="wiki-excerpt">告别繁琐的专用加速盒硬件！手把手教您在家庭网关中配置TProxy透明代理、UPnP动态端口映射与FullCone全锥形NAT，让PS5与Switch轻松达成NAT Type A满血联机状态。</p>
+            </div>
+            <div>
+              <a href="console-ps5-switch-nat-type-optimization.html" class="wiki-readmore">阅读完整联机实战 &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 5 Card -->
+          <article class="wiki-card">
+            <div>
+              <div class="wiki-tag-row">
+                <span class="wiki-cat">私有云盘 · 家庭影院</span>
+                <span>阅读约 6 分钟</span>
+              </div>
+              <h2><a href="nas-docker-remote-media-server.html">群晖NAS与Docker容器加速攻略：轻松拉取海外镜像并搭建私人Emby影院</a></h2>
+              <p class="wiki-excerpt">针对群晖DSM、威联通与自建Linux服务器拉取Docker Hub镜像超时、TMDB影视元数据刮削失败等难题，提供容器级代理环境变量与精细化域名分流的完整落地方案。</p>
+            </div>
+            <div>
+              <a href="nas-docker-remote-media-server.html" class="wiki-readmore">阅读完整部署攻略 &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 6 Card -->
+          <article class="wiki-card">
+            <div>
+              <div class="wiki-tag-row">
+                <span class="wiki-cat">行业揭秘 · 避坑指南</span>
+                <span>阅读约 6 分钟</span>
+              </div>
+              <h2><a href="transparent-pricing-proxy-industry-truth.html">揭秘网络加速器行业的“节点倍率”陷阱：如何识别真正足额给流量的服务商？</a></h2>
+              <p class="wiki-excerpt">为什么有些标称每月500GB流量的套餐看几部4K电影就耗尽了？深度揭露暗改倍率、晚高峰动态QoS限速与超售公网中转三大行业套路，教您用科学方法检验真实带宽。</p>
+            </div>
+            <div>
+              <a href="transparent-pricing-proxy-industry-truth.html" class="wiki-readmore">阅读完整避坑指南 &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-links-only" aria-label="页脚合规导航">
+        <a href="sitemap.html">网站地图</a>
+        <a href="about.html">关于我们</a>
+        <a href="terms.html">服务条款</a>
+        <a href="privacy.html">隐私政策</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
