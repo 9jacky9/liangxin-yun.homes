@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://liangxin-yun.homes/sitemap.xml
